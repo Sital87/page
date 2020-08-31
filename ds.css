@@ -1,0 +1,84 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+body.dark{
+    background: #091921;
+}
+.clockContainer{
+    position: relative;
+    margin: auto;
+    height: 40vw;
+    width: 40vw;
+    align-items: center;
+    background: white url("clock.png");
+    background-size: 100%;
+    border: 4px solid rgb(75, 68, 68);
+}
+body.dark .clockContainer{
+    background: #091921 url("clock.png");
+    background-size: cover;
+    border: 4px solid #2f3d44;
+}
+#hour, #minute, #second{
+    position: absolute;
+    background: repeating-linear-gradient(45deg, black, transparent 100px);
+    border-radius: 20px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 1.8%;
+    height: 23%;
+    top: 30.7%;
+    left: 49.5%;
+    opacity: 0.8;
+}
+#minute{
+    width: 1.5%;
+    height: 26%;
+    top: 27.6%;
+    left: 49.6%;
+    opacity: 0.8;
+}
+#second{
+    width: 1%;
+    height: 30.7%;
+    top: 23%;
+    left: 49.82%;
+    opacity: 0.8;
+}
+.toggleclass
+{
+    position: absolute;
+    top: 30px;
+    right: 82px;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    border-radius: 50%;
+    color: #091921;
+    background: #091921;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.toggleclass:before
+{
+    position: absolute;
+    left: 21px;
+    content: 'dark mode';
+    white-space: nowrap;
+}
+body.dark .toggleclass{
+    background: white;
+    color: white;
+}
+body.dark .toggleclass:before{
+    position: absolute;
+    left: 21px;
+    content: 'light mode';
+    white-space: nowrap;
+}
